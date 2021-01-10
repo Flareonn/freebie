@@ -1,0 +1,45 @@
+.plan
+  background-color: #f5f8ff
+  // padding-top: 120px
+  padding: 170px 0px
+  &>.container
+    display: flex
+    align-items: center
+  &-wrapper
+    flex-basis: 50%
+    &__subtitle
+      @extend .subtitle
+      padding-bottom: 27px
+    &__title
+      font-weight: 500
+      font-size: 36px
+      line-height: 45px
+      color: #3D4F9F
+      padding-bottom: 27px
+    &__description
+      font-family: 'Roboto', sans-serif
+      font-size: 15px
+      line-height: 29px
+      letter-spacing: 0.03em
+      color: #8D96BD
+      padding-bottom: 47px
+  &-group
+    display: flex
+    &__button
+      @extend .button
+      padding: 13px 21px
+      &:first-child
+        border-radius: 2px 0px 0px 2px
+      &:last-child
+        border-radius: 0px 2px 2px 0px
+      &.active
+        background-color: #4C85FF
+        box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75)
+        color: #ffffff
+        font-weight: bold
+        svg
+          margin-left: 6px
+      &.disabled
+        font-weight: 500
+        border: 1px solid #d1d1e4
+        color: #ADB4D2

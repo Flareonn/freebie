@@ -1,0 +1,32 @@
+.stats
+  display: flex
+  justify-content: center
+  &-wrapper
+    width: 100%
+    display: flex
+    flex-direction: column
+    padding: 66px 0px
+    >*:not(:last-child)
+      margin-bottom: 24px
+    &:first-child
+      background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%)
+      align-items: flex-end
+      padding-right: 90px
+      >*
+        color: #fff
+        text-align: right
+    &:last-child
+      background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%)
+      padding-left: 90px
+      >*
+        color: #5e80ff
+    &__number
+      font-size: 48px
+      line-height: 83px
+      letter-spacing: 0.03em
+    &__description
+      font-weight: 500
+      font-size: 18px
+      line-height: 23px
+      letter-spacing: 0.03em
+      width: 260px

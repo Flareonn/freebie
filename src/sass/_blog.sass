@@ -1,0 +1,111 @@
+.blog
+  background-color: #f5f8ff
+  padding: 104px 0px 208px
+  &>.container
+    display: flex
+    align-items: center
+    flex-direction: column
+    position: relative
+  &__subtitle
+    @extend .subtitle
+    padding-bottom: 20px
+  &__title
+    @extend .title
+    padding-bottom: 92px
+  &-slider
+    background-color: #fff
+    border: 1px solid #D8E3FE
+    box-sizing: border-box
+    box-shadow: 0px 15px 50px #EFF4FF
+  &-article
+    display: flex
+    padding: 63.5px 35px
+    flex-wrap: wrap
+    &__info
+      display: flex
+      flex-direction: column
+      flex-basis: 50%
+      >*:not(:last-child)
+        margin-bottom: 32px
+  &-info
+    &__title
+      font-size: 36px
+      line-height: 45px
+      color: #3D4F9F
+    &__description
+      font-size: 14px
+      line-height: 27px
+      letter-spacing: 0.03em
+      color: #8D96BD
+      font-family: 'Roboto', sans-serif
+  &-gallery
+    display: flex
+    flex-basis: 40%
+    margin-right: 10%
+    &_first img
+      height: 100%
+    &_other
+      display: flex
+      flex-direction: column
+      position: relative
+      img
+        height: 136px
+  &-group
+    display: flex
+    &__button
+      @extend .button
+      &:first-child
+        @extend .button_blue
+        margin-right: 8px
+
+.swiper-container.blog-slider
+  width: 65%
+  height: 394px
+
+.swiper-button
+  &-next, &-prev
+    top: calc(50% + 62px)!important
+    &::after
+      font-size: auto
+      font-family: serif
+      content: url('../img/arrow.svg')!important
+  &-next
+    right: 150px!important
+  &-prev
+    left: 150px!important
+    &::after
+      transform: rotate(180deg)
+
+.swiper-pagination
+  bottom: -101px
+  &-bullet
+    &:not(:last-child)
+      margin-right: 12px
+    &-active
+      background-color: #5283FF!important
+.gallery-photo
+  position: relative
+  cursor: pointer
+  &__loop
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    opacity: 0
+    transition: .1s opacity linear
+    &.active
+      opacity: 1
+.gallery-popup
+  position: fixed
+  top: 0
+  width: 100vw
+  height: 100vh
+  z-index: 111111111111111
+  background-color: rgba(#000, .25)
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  &__photo
+    width: 650px
+    height: 650px

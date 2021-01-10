@@ -1,0 +1,53 @@
+.header
+  padding: 27px 0px
+  &>.container
+    display: flex
+    justify-content: space-between
+  &-wrapper
+    display: flex
+    align-items: center
+    flex-basis: 50%
+  &-logo
+    width: 26px
+    height: 26px
+    background: #5E81FE
+    border-radius: 50%
+    margin-right: 72px
+  &-list, &-group__social, &-group
+    display: flex
+    justify-content: space-between
+  &-list
+    &__item
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      display: flex
+      align-items: center
+      text-align: center
+      letter-spacing: 0.05em
+      text-transform: capitalize
+      text-shadow: 0px 0px 5px #E6E6E6
+      &> a
+        color: #697ca6
+      &:hover > a, &.active > a
+        color: #5E81FE
+      &:not(:last-child)
+        margin-right: 42px
+  &-group
+    align-items: center
+    flex-basis: 100%
+    justify-content: flex-end
+    &__social
+      margin-right: 44px
+      flex-basis: 25%
+    &__button
+      flex-basis: 113px
+      @extend .button
+      @extend .button_blue
+  &-social
+    &__link
+      &> a svg path
+        transition: .15s fill linear
+      &> a:hover svg path
+        fill: #6188FF
+        transition: .15s fill linear

@@ -1,0 +1,42 @@
+.hero
+  background-image: url('../img/clouds-1.png')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  height: 447px
+  &>.container
+    padding: 91px 247px
+    text-align: center
+    color: #ffffff
+  &__subtitle
+    @extend .subtitle
+    color: inherit
+    padding-bottom: 16px
+  &__title
+    @extend .title
+    font-weight: 300
+    font-size: 48px
+    line-height: 60px
+    color: inherit
+    padding-bottom: 28px
+  &__description
+    padding-bottom: 28px
+    font-family: "Roboto", sans-serif
+    font-size: 15px
+    line-height: 29px
+    letter-spacing: 0.03em
+    width: 75%
+    margin: 0 auto
+  &-group
+    display: flex
+    justify-content: center
+    &__button
+      @extend .button
+      &:last-child
+        border: 1px solid #A0B4FF
+        border-radius: 0px 2px 2px 0px
+      &:first-child
+        font-weight: bold
+        color: #565F82
+        background-color: #fff
+        border-radius: 2px 0px 0px 2px

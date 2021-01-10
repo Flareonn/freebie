@@ -1,0 +1,55 @@
+.quotes
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%)
+  padding: 110px 0px
+  overflow: hidden
+  &>.container
+    display: flex
+  &__subtitle
+    @extend .subtitle
+    padding-bottom: 31px
+  &__title
+    font-weight: 500
+    font-size: 36px
+    line-height: 45px
+    color: #3D4F9F
+    padding-bottom: 14px
+  &__description
+    font-family: "Open Sans", sans-serif
+    font-weight: 600
+    font-size: 12px
+    line-height: 23px
+    letter-spacing: 0.03em
+    color: #A4ABC8
+  &-wrapper:first-child
+    min-width: 333px
+    margin-right: 135px
+    margin-left: 159px
+  &-slider
+    height: 300px
+  &-slide
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &__description
+      background-color: #fff
+      border: 1px solid #D8E3FE
+      box-sizing: border-box
+      box-shadow: 0px 5px 50px #F3F5FA
+      max-width: 423px
+      padding: 40px 70px
+      position: relative
+      span
+        font-family: "Roboto", sans-serif
+        font-size: 14px
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: #676F95
+    &__avatar
+      position: absolute
+      bottom: -30px
+      left: 50%
+      transform: translateX(-50%)
+
+// .swiper-container.quotes-slider>.swiper-pagination-bullets
+//   left: -30%

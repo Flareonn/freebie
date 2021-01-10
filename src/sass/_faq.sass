@@ -1,0 +1,83 @@
+.faq
+  &>.container
+    text-align: center
+    padding: 175px 231px
+  &__subtitle
+    @extend .subtitle
+    padding-bottom: 20px
+  &__title
+    font-weight: 500
+    font-size: 24px
+    line-height: 30px
+    color: #3D4F9F
+    padding-bottom: 53px
+  &-list
+    &__item
+      display: flex
+      cursor: pointer
+      flex-direction: column
+      border-bottom: 1px solid #D8E3FE
+      position: relative
+      &:hover
+        .faq-list
+          &__question
+            color: #4f5b8a
+          &__icon path
+            stroke: #4f5b8a
+      &.active
+        flex-direction: column
+        cursor: default
+        .faq-list
+          &__question
+            color: #495274
+            font-weight: bold
+            cursor: pointer
+          &__answer
+            visibility: visible
+            transition: .25s all linear
+            top: 0
+            position: relative
+          &__icon
+            transform: rotate(180deg)
+            padding-left: 24px
+            padding-right: 0
+            path
+              stroke: #495274
+    &__question
+      padding: 30px 24px
+      width: 100%
+      display: flex
+      font-weight: 500
+      font-size: 15px
+      line-height: 19px
+      letter-spacing: 0.03em
+      color: #8E96B7
+    &__answer
+      visibility: hidden
+      padding: 16px 16px 80px 53px
+      display: flex
+      transition: .25s all linear
+      font-family: "Roboto", sans-serif
+      font-size: 14px
+      line-height: 27px
+      letter-spacing: 0.03em
+      color: #8D96BD
+      position: absolute
+      top: -50px
+    &__icon
+      padding-right: 24px
+  &-block
+    align-items: center
+    text-align: left
+    justify-content: space-between
+    &__description
+      padding-right: 62px
+      width: 75%
+      cursor: text
+    &__link
+      @extend .button
+      background-color: #E8ECF4
+      padding: 13px 14.5px
+      transition: all .15s linear
+      &:hover
+        @extend .button_blue

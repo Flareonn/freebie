@@ -1,0 +1,40 @@
+$maxWidth: 1280
+
+@mixin adaptive-font($pcSize, $mobSize) // Адаптивный шрифт
+  $addSize: $pcSize - $mobSize
+  $maxWidth: $maxWidth - 320
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+.subtitle
+  font-family: 'Roboto', sans-serif
+  font-weight: 500
+  font-size: 10px
+  line-height: 12px
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: #3D4F9F
+
+.title
+  font-weight: 500
+  font-size: 24px
+  line-height: 30px
+  color: #3D4F9F
+
+.button
+  font-weight: bold
+  font-size: 13px
+  line-height: 16px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 2px
+  padding: 13px 15.5px
+  color: #A6B6DA
+  user-select: none
+  &_blue
+    color: $c-active
+    background-color: $c-sec
+    transition: .15s background-color linear
+    &:hover
+      background-color: #b5ccfa
+      transition: .15s background-color linear
